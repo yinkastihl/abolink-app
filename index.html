@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get AboLink</title>
+<meta name="description" content="Download the AboLink app for your AboLink cameras, NVRs, smart locks and sensors.">
+<meta name="theme-color" content="#0A1428">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<style>
+  :root { --ink:#0A1428; --raised:#132447; --teal:#00B3A4; --mist:#F4F7FB; --slate:#9AA8BC; --line:#22345A; }
+  * { box-sizing: border-box; }
+  body { margin:0; min-height:100vh; background:linear-gradient(#132447, #0A1428 60%); color:var(--mist);
+         font:16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; display:flex; justify-content:center; }
+  main { width:100%; max-width:440px; padding:48px 24px 40px; text-align:center; }
+  .logo { width:96px; height:96px; }
+  h1 { font-size:40px; font-weight:800; margin:8px 0 0; letter-spacing:-0.5px; }
+  h1 span { color:var(--teal); }
+  .tag { color:var(--slate); margin:2px 0 32px; font-size:18px; }
+  .card { background:var(--raised); border:1px solid var(--line); border-radius:16px; padding:22px; margin:0 0 16px; text-align:left; }
+  .card h2 { margin:0 0 4px; font-size:19px; }
+  .card p { margin:0 0 14px; color:var(--slate); font-size:15px; }
+  .btn { display:block; text-align:center; background:var(--teal); color:var(--ink); font-weight:700; font-size:17px;
+         text-decoration:none; border-radius:14px; padding:15px; }
+  .btn:active { background:#008577; }
+  .soon { display:block; text-align:center; border:1px dashed var(--line); color:var(--slate); border-radius:14px; padding:14px; font-weight:600; }
+  ol { margin:14px 0 0; padding-left:20px; color:var(--slate); font-size:14px; }
+  ol li { margin:4px 0; }
+  .qr { display:none; margin:8px auto 24px; background:#fff; padding:14px; border-radius:16px; width:220px; }
+  .qr img { width:100%; display:block; }
+  .desktop .qr { display:block; }
+  .note { color:var(--slate); font-size:13px; margin-top:28px; }
+  .hide { display:none; }
+</style>
+</head>
+<body>
+<main>
+  <img class="logo" src="logo.svg" alt="">
+  <h1>Abo<span>Link</span></h1>
+  <p class="tag">See home. Anywhere.</p>
+
+  <div class="qr"><img src="qr.png" alt="QR code to open this page on your phone"></div>
+
+  <section class="card" id="android">
+    <h2>Android</h2>
+    <p>Version <!--VERSION-->1.0.0<!--/VERSION--> · for Android 8 and later</p>
+    <a class="btn" href="https://github.com/yinkastihl/abolink-app/releases/latest/download/AboLink.apk">Download for Android</a>
+    <ol>
+      <li>Open the downloaded <b>AboLink.apk</b>.</li>
+      <li>If Android asks, allow installing apps from your browser.</li>
+      <li>Tap <b>Install</b>, then open AboLink and sign in.</li>
+    </ol>
+  </section>
+
+  <section class="card" id="ios">
+    <h2>iPhone</h2>
+    <p>The iPhone app is on its way to the App Store.</p>
+    <span class="soon">Coming soon</span>
+  </section>
+
+  <p class="note">This is an early test version of AboLink.</p>
+</main>
+<script>
+  // Show the matching platform first; show the QR code on computers.
+  var ua = navigator.userAgent || "";
+  var isAndroid = /Android/i.test(ua);
+  var isIOS = /iPhone|iPad|iPod/i.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  if (isIOS) { var a = document.getElementById("android"), i = document.getElementById("ios"); i.parentNode.insertBefore(i, a); }
+  if (!isAndroid && !isIOS) document.body.classList.add("desktop");
+</script>
+</body>
+</html>

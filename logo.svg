@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <!-- AboCam mark: lens ring, offset pupil, signal arcs -->
+  <g transform="translate(-68 31)" fill="none" stroke-linecap="round">
+    <circle cx="512" cy="560" r="250" stroke="#00B3A4" stroke-width="72"/>
+    <path d="M635 222 A360 360 0 0 1 850 437" stroke="#00B3A4" stroke-width="56"/>
+    <path d="M702 152 A450 450 0 0 1 920 370" stroke="#00B3A4" stroke-width="56" opacity="0.55"/>
+    <circle cx="548" cy="528" r="104" fill="#F4F7FB" stroke="none"/>
+    <circle cx="582" cy="494" r="28" fill="#0A1428" stroke="none"/>
+  </g>
+</svg>
